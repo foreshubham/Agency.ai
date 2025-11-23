@@ -1,18 +1,18 @@
-import Container from "../component/Container";
+
 import ServiceCard from "../component/Cards/ServiceCard";
+import Features from "../component/Screen-Comp/Services/Layout1";
+import About from "../component/Screen-Comp/Services/Layout3";
+import Stats from "../component/Screen-Comp/Services/Layout2";
+import ScrollServices from "../component/Cards/ScrollOverlap";
 
 export default function Services() {
   return (
-    <Container>
-      <section className="py-20">
-        <h1 className="text-4xl font-bold mb-10 text-center">Our Services</h1>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          <ServiceCard title="Digital Marketing" desc="Grow your brand online" />
-          <ServiceCard title="Eco-friendly Branding" desc="Go green responsibly" />
-          <ServiceCard title="Web Development" desc="Modern, fast websites" />
-        </div>
-      </section>
-    </Container>
+    <>
+    <ScrollServices />
+      <Features />
+      {/* <Stats /> */}
+      <About />
+      {/* <ScrollServices /> */}
+    </>
   );
 }

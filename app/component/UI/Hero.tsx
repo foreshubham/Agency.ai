@@ -19,7 +19,7 @@ export default function Hero() {
       </div>
 
       {/* Soft Gradient Overlay (same as before) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#e8ecff]/50 dark:via-[#1a1c2b]/60 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#e8ecff]/50 dark:via-[#1a1c2b]/60 to-transparent pointer-events-none" />
 
       {/* Decorative Blobs */}
       <div className="absolute left-10 top-48 w-3 h-3 rounded-full bg-[#4A48FF]/40 blur-[2px]" />
@@ -84,6 +84,7 @@ export default function Hero() {
             />
           </div>
         </motion.div>
+
 
       </div>
     </section>

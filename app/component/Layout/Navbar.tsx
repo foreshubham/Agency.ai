@@ -31,8 +31,8 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="logo" className="w-8 h-8" />
           <span className="text-xl font-semibold tracking-tight">
-            <span className="text-black dark:text-white">agency</span>
-            <span className="text-brand-blue">.ai</span>
+            <span className="text-black dark:text-white">Circum </span>
+            <span className="text-brand-blue">Centric</span>
           </span>
         </div>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
                 href={
                   item === "Home"
                     ? "/"
-                    : `/${item.toLowerCase().replace(" ", "")}`
+                    : `/${item.toLowerCase().replace(" ", "-")}`
                 }
                 className="relative group"
               >
@@ -57,7 +57,7 @@ export default function Navbar() {
                 {/* underline animation */}
                 <span
                   className="
-                    absolute left-0 -bottom-1 w-0 h-[2px]
+                    absolute left-0 -bottom-1 w-0 h-0.5
                     bg-brand-blue group-hover:w-full
                     transition-all duration-300
                   "
@@ -69,7 +69,7 @@ export default function Navbar() {
 
         {/* Right Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          {/* Theme Toggle */}
+          {/* Theme Toggle 
           <button
             onClick={toggleTheme}
             className="
@@ -81,6 +81,7 @@ export default function Navbar() {
           >
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
+          */}
 
           {/* CTA Button */}
           <motion.div
@@ -88,7 +89,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.97 }}
           >
             <Link
-              href="/contact"
+              href="/contact-us"
               className="
                 px-6 py-2 rounded-full text-white
                 bg-[#5044E5] font-medium
@@ -147,12 +148,12 @@ export default function Navbar() {
           {/* Mobile CTA */}
           <div className="flex items-center gap-3 pt-3">
             {/* Toggle */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className="w-10 h-10 rounded-full border flex items-center justify-center border-gray-400 dark:border-gray-600"
             >
               {dark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
+            </button> */}
 
             <motion.div
               className="flex-1"
@@ -160,10 +161,10 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                href="/contact"
+                href="/contact-us"
                 onClick={() => setIsOpen(false)}
                 className="
-                  flex-1 text-center px-4 py-2 rounded-full text-black
+                  flex-1 text-center px-4 py-2 bg-[#5044E5] rounded-full text-black
                   font-medium bg-brand-cta hover:bg-brand-blue transition
                 "
               >

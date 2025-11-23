@@ -20,8 +20,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     // Lenis smooth scroll
     const lenis = new Lenis({
       duration: 1.2,
-      smooth: true,
-      smoothTouch: false,
     });
 
     function raf(time: number) {
