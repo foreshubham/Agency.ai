@@ -18,21 +18,21 @@ export default function Navbar() {
     <nav
       className="
         w-full
-        border-b border-gray-200 dark:border-gray-800
-        bg-white/70 dark:bg-[#0F111A]/40
+        border-b border-gray-200 
+        bg-white/70 dark:bg-[#0F111A]/20
         backdrop-blur-xl
         sticky top-0 z-50
         transition-all duration-300
       "
     >
-      <div className="max-w-10/12 mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         
         {/* Left: Logo */}
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="logo" className="w-8 h-8" />
           <span className="text-xl font-semibold tracking-tight">
             <span className="text-black dark:text-white">Circum </span>
-            <span className="text-brand-blue text-[#4A48FF]">Centric</span>
+            <span className="text-[#4A48FF]">Centric</span>
           </span>
         </div>
 
@@ -58,7 +58,7 @@ export default function Navbar() {
                 <span
                   className="
                     absolute left-0 -bottom-1 w-0 h-0.5
-                    bg-brand-blue group-hover:w-full
+                    bg-[#4A48FF] group-hover:w-full
                     transition-all duration-300
                   "
                 ></span>
@@ -69,31 +69,15 @@ export default function Navbar() {
 
         {/* Right Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          {/* Theme Toggle 
-          <button
-            onClick={toggleTheme}
-            className="
-              w-10 h-10 rounded-full border
-              flex items-center justify-center
-              border-gray-400 dark:border-gray-600
-              hover:scale-105 transition
-            "
-          >
-            {dark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-          */}
 
           {/* CTA Button */}
-          <motion.div
-            whileHover={{ scale: 1.06 }}
-            whileTap={{ scale: 0.97 }}
-          >
+          <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.97 }}>
             <Link
               href="/contact-us"
               className="
                 px-6 py-2 rounded-full text-white
                 bg-[#5044E5] font-medium
-                hover:bg-brand-blue transition
+                hover:bg-[#4A48FF] transition
               "
             >
               Connect →
@@ -135,7 +119,7 @@ export default function Navbar() {
                   href={
                     item === "Home"
                       ? "/"
-                      : `/${item.toLowerCase().replace(" ", "")}`
+                      : `/${item.toLowerCase().replace(" ", "-")}`
                   }
                   onClick={() => setIsOpen(false)}
                 >
@@ -147,14 +131,6 @@ export default function Navbar() {
 
           {/* Mobile CTA */}
           <div className="flex items-center gap-3 pt-3">
-            {/* Toggle */}
-            {/* <button
-              onClick={toggleTheme}
-              className="w-10 h-10 rounded-full border flex items-center justify-center border-gray-400 dark:border-gray-600"
-            >
-              {dark ? <Sun size={18} /> : <Moon size={18} />}
-            </button> */}
-
             <motion.div
               className="flex-1"
               whileHover={{ scale: 1.04 }}
@@ -164,8 +140,9 @@ export default function Navbar() {
                 href="/contact-us"
                 onClick={() => setIsOpen(false)}
                 className="
-                  flex-1 text-center px-4 py-2 bg-[#5044E5] rounded-full text-black
-                  font-medium bg-brand-cta hover:bg-brand-blue transition
+                  flex-1 text-center px-4 py-2 
+                  bg-[#5044E5] rounded-full text-white
+                  font-medium hover:bg-[#4A48FF] transition
                 "
               >
                 Connect →

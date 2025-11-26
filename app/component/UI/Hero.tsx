@@ -10,7 +10,7 @@ export default function Hero() {
       {/* --- Blue Background Image Behind Everything --- */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/bgImage1.png"   
+          src="/bgImage1.png"
           alt="background glow"
           fill
           priority
@@ -18,8 +18,8 @@ export default function Hero() {
         />
       </div>
 
-      {/* Soft Gradient Overlay (same as before) */}
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#e8ecff]/50 dark:via-[#1a1c2b]/60 to-transparent pointer-events-none" />
+      {/* Soft Gradient Overlay */}
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#e8ecff]/50 to-transparent pointer-events-none" />
 
       {/* Decorative Blobs */}
       <div className="absolute left-10 top-48 w-3 h-3 rounded-full bg-[#4A48FF]/40 blur-[2px]" />
@@ -35,9 +35,9 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex justify-center mb-6"
         >
-          <div className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-[#0F111A] shadow-sm rounded-full border border-gray-200/60 dark:border-gray-700/50">
+          <div className="flex items-center gap-2 px-4 py-2 bg-white shadow-sm rounded-full border border-gray-200/60">
             <img src="/group_profile.png" alt="users" className="w-18 rounded-full" />
-            <span className="text-gray-600 dark:text-gray-300 text-sm">
+            <span className="text-gray-600 text-sm">
               Trusted by 10k+ people
             </span>
           </div>
@@ -62,7 +62,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-          className="mt-6 text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto"
+          className="mt-6 text-gray-600 text-lg max-w-2xl mx-auto"
         >
           Creating meaningful connections and turning big ideas into interactive digital experiences.
         </motion.p>
@@ -84,7 +84,6 @@ export default function Hero() {
             />
           </div>
         </motion.div>
-
 
       </div>
     </section>

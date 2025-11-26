@@ -5,22 +5,23 @@ import Image from "next/image";
 export default function HowCanWeHelp() {
   return (
     <section className="w-full py-24 bg-white text-center relative overflow-hidden">
+
       {/* Background gradient + noise */}
-      <div className="absolute inset-0 bg-linear-to-b from-white via-purple-50 to-white opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-white opacity-90" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
-        
+
         {/* Trusted Logos */}
         <p className="text-gray-500 mb-6 text-sm">Trusted by Leading Companies</p>
 
-        <div className="flex flex-wrap justify-center items-center gap-10 mb-20 opacity-90">
+        <div className="flex flex-wrap justify-center items-center gap-10 mb-20">
           {company_logos.map((logo, index) => (
             <Image
               key={index}
               src={logo}
               alt="company logo"
-              className="h-6 w-auto opacity-90"
               height={24}
+              className="h-6 w-auto"
             />
           ))}
         </div>
