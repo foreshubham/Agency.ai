@@ -1,3 +1,4 @@
+// Number of clients, projects, awards, etc. with animations
 "use client";
 
 import { motion } from "framer-motion";

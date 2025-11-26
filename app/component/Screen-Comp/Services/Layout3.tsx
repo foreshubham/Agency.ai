@@ -1,3 +1,4 @@
+// Lowest Layout with Image on Left and Text on Right
 "use client";
 
 import { motion } from "framer-motion";

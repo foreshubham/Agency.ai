@@ -21,8 +21,8 @@ export default function Footer() {
           <div className="flex items-center gap-2 mb-4">
             <img src="/logo.png" alt="logo" className="w-9 h-9" />
             <span className="text-2xl font-semibold tracking-tight">
-              <span className="text-black dark:text-white">agency</span>
-              <span className="text-[#4A48FF]">.ai</span>
+              <span className="text-black dark:text-white">Cicrum</span>
+              <span className="text-[#4A48FF]"> Centric</span>
             </span>
           </div>
 
