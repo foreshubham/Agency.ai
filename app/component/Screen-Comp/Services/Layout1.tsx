@@ -88,12 +88,12 @@ export default function ServicesSection() {
 
       <div className="max-w-7xl mx-auto px-6">
         {/* FILTER TABS */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-4 mb-16 ">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition ${
+              className={`px-6 py-2 rounded-full text-sm font-medium transition cursor-none ${
                 activeFilter === filter
                   ? "bg-[#4A48FF] text-white"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -120,7 +120,7 @@ export default function ServicesSection() {
                 <div className="absolute inset-0 rounded-3xl bg-linear-to-r from-[#4A48FF]/30 to-[#7F7CFF]/30 opacity-0 group-hover:opacity-100 blur-xl transition" />
 
                 {/* Card */}
-                <div className="relative bg-white border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg flex flex-col h-full">
+                <div className="relative bg-white border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg flex flex-col h-full cursor-none">
                   {/* Image */}
                   <div className="relative h-56">
                     <Image

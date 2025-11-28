@@ -32,11 +32,11 @@ export default function Footer() {
           </p>
 
           {/* Footer links */}
-          <ul className="flex flex-wrap gap-8 text-gray-700 font-medium text-sm md:text-base">
-            <li><Link className="text-[15px]" href="/">Home</Link></li>
-            <li><Link className="text-[15px]" href="/services">Services</Link></li>
-            <li><Link className="text-[15px]" href="/work">Our Work</Link></li>
-            <li><Link className="text-[15px]" href="/contact">Contact Us</Link></li>
+          <ul className="flex flex-wrap gap-8 text-gray-700 font-medium text-sm md:text-base ">
+            <li><Link className="text-[15px] cursor-none" href="/">Home</Link></li>
+            <li><Link className="text-[15px] cursor-none" href="/services">Services</Link></li>
+            <li><Link className="text-[15px] cursor-none" href="/our-work">Our Work</Link></li>
+            <li><Link className="text-[15px] cursor-none" href="/contact-us">Contact Us</Link></li>
           </ul>
 
           <div className="w-full h-px bg-gray-300 my-6"></div>
@@ -75,10 +75,10 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex items-center gap-5 mt-6 md:justify-end">
-            <Link href="#"><Facebook size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
-            <Link href="#"><Twitter size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
-            <Link href="#"><Instagram size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
-            <Link href="#"><Linkedin size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
+            {/* <Link href="#"><Facebook size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link> */}
+            <Link href="https://x.com/circumcentric" target="_blank"><Twitter size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
+            <Link href="https://instagram.com/circum.centric" target="_blank"><Instagram size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
+            <Link href="https://linkedin.com/company/circum-centric" target="_blank"><Linkedin size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
           </div>
         </motion.div>
 

@@ -50,7 +50,7 @@ export default function Navbar() {
                     ? "/"
                     : `/${item.toLowerCase().replace(" ", "-")}`
                 }
-                className="relative group"
+                className="relative group cursor-none"
               >
                 {item}
 
@@ -77,7 +77,7 @@ export default function Navbar() {
               className="
                 px-6 py-2 rounded-full text-white
                 bg-[#5044E5] font-medium
-                hover:bg-[#4A48FF] transition
+                hover:bg-[#4A48FF] transition cursor-none
               "
             >
               Connect →
@@ -142,7 +142,7 @@ export default function Navbar() {
                 className="
                   flex-1 text-center px-4 py-2 
                   bg-[#5044E5] rounded-full text-white
-                  font-medium hover:bg-[#4A48FF] transition
+                  font-medium hover:bg-[#4A48FF] transition cursor-none
                 "
               >
                 Connect →

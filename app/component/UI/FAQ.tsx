@@ -65,7 +65,7 @@ export default function FAQ() {
               <div
                 key={index}
                 onClick={() => toggle(index)}
-                className="px-6 py-5 cursor-pointer select-none"
+                className="px-6 py-5 cursor-none select-none "
               >
                 <div className="flex items-center justify-between">
                   <h3 className="text-[17px] font-medium text-gray-900">
