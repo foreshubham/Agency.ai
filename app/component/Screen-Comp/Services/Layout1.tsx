@@ -87,8 +87,7 @@ export default function ServicesSection() {
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-transparent via-[#e8ecff]/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* ✅ FILTER TABS */}
+        {/* FILTER TABS */}
         <div className="flex flex-wrap justify-center gap-4 mb-16">
           {filters.map((filter) => (
             <button
@@ -97,7 +96,7 @@ export default function ServicesSection() {
               className={`px-6 py-2 rounded-full text-sm font-medium transition ${
                 activeFilter === filter
                   ? "bg-[#4A48FF] text-white"
-                  : "bg-gray-100 dark:bg-gray-800 text-gray-600 hover:bg-gray-200"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
               }`}
             >
               {filter}
@@ -105,7 +104,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* ✅ SERVICE GRID */}
+        {/* SERVICE GRID */}
         <div className="grid md:grid-cols-3 gap-12">
           {filteredServices.map((service, i) => (
             <motion.div
@@ -121,8 +120,7 @@ export default function ServicesSection() {
                 <div className="absolute inset-0 rounded-3xl bg-linear-to-r from-[#4A48FF]/30 to-[#7F7CFF]/30 opacity-0 group-hover:opacity-100 blur-xl transition" />
 
                 {/* Card */}
-                <div className="relative bg-white dark:bg-[#0F111A] border border-gray-200/60 dark:border-gray-700/40 rounded-3xl overflow-hidden shadow-lg flex flex-col h-full">
-
+                <div className="relative bg-white border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg flex flex-col h-full">
                   {/* Image */}
                   <div className="relative h-56">
                     <Image
@@ -134,12 +132,10 @@ export default function ServicesSection() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-8 flex flex-col flex-1">
-                    <h3 className="text-xl mb-3">
-                      {service.title}
-                    </h3>
+                  <div className="p-8 flex flex-col flex-1 text-[#364153]">
+                    <h3 className="text-xl mb-3">{service.title}</h3>
 
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed flex-1">
+                    <p className="text-gray-600 text-sm leading-relaxed flex-1">
                       {service.description}
                     </p>
 

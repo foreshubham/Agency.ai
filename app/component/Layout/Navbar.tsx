@@ -32,7 +32,7 @@ export default function Navbar() {
           <img src="/logo.png" alt="logo" className="w-8 h-8" />
           <span className="text-xl font-semibold tracking-tight">
             <span className="text-black dark:text-white">Circum </span>
-            <span className="text-[#4A48FF]">Centric</span>
+            <span className="text-black">Centric</span>
           </span>
         </div>
 

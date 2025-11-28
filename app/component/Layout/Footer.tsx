@@ -23,7 +23,7 @@ export default function Footer() {
             <img src="/logo.png" alt="logo" className="w-9 h-9" />
             <span className="text-2xl font-semibold tracking-tight">
               <span className="text-black">Cicrum</span>
-              <span className="text-[#4A48FF]"> Centric</span>
+              <span className="text-black"> Centric</span>
             </span>
           </div>
 

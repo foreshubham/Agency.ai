@@ -51,9 +51,9 @@ const pricingPlans = [
 
 export default function PricingSection() {
   return (
-    <section className="py-22 relative">
+    <section className="py-24 relative">
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-linear-to-b from-transparent via-[#e8ecff]/40 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-transparent via-[#e8ecff]/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -66,7 +66,7 @@ export default function PricingSection() {
           Simple & Transparent <span className="text-[#4A48FF]">Pricing</span>
         </motion.h2>
 
-        <p className="text-center text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+        <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
           Choose a plan that fits your business needs. No hidden costs.
         </p>
 
@@ -79,15 +79,17 @@ export default function PricingSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15 }}
               whileHover={{ y: -8 }}
-              className={`relative rounded-3xl p-8 border backdrop-blur-xl shadow-lg ${
-                plan.popular
-                  ? "border-[#4A48FF] bg-white"
-                  : "border-gray-200 bg-white/80"
-              }`}
+              className={`relative rounded-3xl p-8 border backdrop-blur-md shadow-xl transition-all
+                ${
+                  plan.popular
+                    ? "border-[#4A48FF] bg-white"
+                    : "border-gray-200 bg-white/90"
+                }
+              `}
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-sm rounded-full bg-[#4A48FF] text-white">
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-sm rounded-full bg-[#4A48FF] text-white shadow-md">
                   Most Popular
                 </span>
               )}
@@ -103,7 +105,7 @@ export default function PricingSection() {
               <ul className="mt-8 space-y-3">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
-                    <span className="text-green-500">✔</span>
+                    <span className="text-[#4A48FF] font-bold">✔</span>
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -112,8 +114,8 @@ export default function PricingSection() {
               <button
                 className={`mt-8 w-full py-3 rounded-xl font-medium transition ${
                   plan.popular
-                    ? "bg-[#4A48FF] text-white hover:bg-[#3836e4]"
-                    : "bg-gray-100 hover:bg-gray-200"
+                    ? "bg-[#4A48FF] text-white hover:bg-[#3a38d8]"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
                 Get Started
