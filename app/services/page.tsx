@@ -10,7 +10,7 @@ export default function Services() {
   return (
     <>
     <ScrollServices />
-      <Features />
+      {/* <Features /> */}
       {/* <Stats /> */}
       <PricingSection />
       <About />
