@@ -7,7 +7,7 @@ export default function HowCanWeHelp() {
     <section className="w-full py-24 bg-white text-center relative overflow-hidden">
 
       {/* Background gradient + noise */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50 to-white opacity-90" />
+      <div className="absolute inset-0 bg-linear-to-b from-white via-purple-50 to-white opacity-90" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
 
@@ -45,7 +45,7 @@ export default function HowCanWeHelp() {
               <Image src={assets.ads_icon} alt="Ads Icon" className="h-8 w-8" />
             </div>
             <div className="text-left">
-              <h3 className="font-semibold text-lg mb-2">Advertising</h3>
+              <h3 className="font-semibold text-lg mb-2 text-[#364153]">Advertising</h3>
               <p className="text-gray-500 text-sm">
                 We turn bold ideas into powerful digital solutions that connect,
                 engage...
@@ -59,7 +59,7 @@ export default function HowCanWeHelp() {
               <Image src={assets.marketing_icon} alt="Marketing Icon" className="h-8 w-8" />
             </div>
             <div className="text-left">
-              <h3 className="font-semibold text-lg mb-2">Content marketing</h3>
+              <h3 className="font-semibold text-lg mb-2 text-[#364153]">Content marketing</h3>
               <p className="text-gray-500 text-sm">
                 We help you execute your plan and deliver results.
               </p>
@@ -72,7 +72,7 @@ export default function HowCanWeHelp() {
               <Image src={assets.content_icon} alt="Content Icon" className="h-8 w-8" />
             </div>
             <div className="text-left">
-              <h3 className="font-semibold text-lg mb-2">Content writing</h3>
+              <h3 className="font-semibold text-lg mb-2 text-[#364153]">Content writing</h3>
               <p className="text-gray-500 text-sm">
                 We help you create a marketing strategy that drives results.
               </p>
@@ -85,7 +85,7 @@ export default function HowCanWeHelp() {
               <Image src={assets.social_icon} alt="Social Icon" className="h-8 w-8" />
             </div>
             <div className="text-left">
-              <h3 className="font-semibold text-lg mb-2">Social media</h3>
+              <h3 className="font-semibold text-lg mb-2 text-[#364153]  ">Social media</h3>
               <p className="text-gray-500 text-sm">
                 We help you build a strong social media presence and engage with
                 your audience.
