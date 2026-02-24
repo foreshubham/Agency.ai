@@ -3,13 +3,50 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { useState } from "react";
+import { FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsg] = useState("");
+
+  async function handleSubscribe() {
+    setLoading(true);
+    setMsg("");
+
+    // Basic email validation
+    if (!email || !email.includes("@")) {
+      setMsg("Please enter a valid email.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setMsg("Thank you for subscribing!");
+        setEmail("");
+      } else {
+        setMsg(data.error || "Subscription failed. Please try again.");
+      }
+    } catch (error) {
+      setMsg("Server error. Please try again later.");
+    }
+
+    setLoading(false);
+  }
+
   return (
     <footer className="relative w-full bg-[#F9FAFB] border-t border-gray-200 py-12">
-
       <div className="max-w-10/12 mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
-
         {/* LEFT SECTION */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -17,12 +54,11 @@ export default function Footer() {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-
           {/* Logo */}
           <div className="flex items-center gap-2 mb-4">
             <img src="/logo.png" alt="logo" className="w-9 h-9" />
             <span className="text-2xl font-semibold tracking-tight">
-              <span className="text-black">Cicrum</span>
+              <span className="text-black">Circum</span>
               <span className="text-black"> Centric</span>
             </span>
           </div>
@@ -33,16 +69,16 @@ export default function Footer() {
 
           {/* Footer links */}
           <ul className="flex flex-wrap gap-8 text-gray-700 font-medium text-sm md:text-base ">
-            <li><Link className="text-[15px] cursor-none" href="/">Home</Link></li>
-            <li><Link className="text-[15px] cursor-none" href="/services">Services</Link></li>
-            <li><Link className="text-[15px] cursor-none" href="/our-work">Our Work</Link></li>
-            <li><Link className="text-[15px] cursor-none" href="/contact-us">Contact Us</Link></li>
+            <li><Link className="text-[15px] cursor-pointer" href="/">Home</Link></li>
+            <li><Link className="text-[15px] cursor-pointer" href="/services">Services</Link></li>
+            <li><Link className="text-[15px] cursor-pointer" href="/our-work">Our Work</Link></li>
+            <li><Link className="text-[15px] cursor-pointer" href="/contact-us">Contact Us</Link></li>
           </ul>
 
           <div className="w-full h-px bg-gray-300 my-6"></div>
 
           <p className="text-gray-500 text-sm">
-            Copyright © 2025 · All Rights Reserved.
+            Copyright © {new Date().getFullYear()} · All Rights Reserved.
           </p>
         </motion.div>
 
@@ -54,9 +90,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="flex flex-col justify-start md:items-end text-left"
         >
-          <h3 className="text-lg text-gray-900 mb-2">
-            Subscribe to our newsletter
-          </h3>
+          <h3 className="text-lg text-gray-900 mb-2">Subscribe to our newsletter</h3>
 
           <p className="text-gray-600 mb-4 text-sm max-w-xs md:text-right">
             The latest news, insights, and eco-friendly tech resources—delivered weekly.
@@ -67,21 +101,33 @@ export default function Footer() {
               type="email"
               placeholder="Enter your email"
               className="w-full md:w-64 px-4 py-3 rounded-lg border border-gray-300 bg-white text-black"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={loading}
             />
-            <button className="px-6 py-3 rounded-lg bg-[#4A48FF] text-white font-medium hover:bg-[#3a38e0] transition">
-              Subscribe
+            <button
+              onClick={handleSubscribe}
+              disabled={loading}
+              className="px-6 py-3 rounded-lg bg-[#4A48FF] text-white font-medium hover:bg-[#3a38e0] transition disabled:opacity-60"
+            >
+              {loading ? "Subscribing..." : "Subscribe"}
             </button>
           </div>
+
+          {msg && (
+            <p className="mt-3 text-sm text-[#4A48FF] font-medium md:text-right">
+              {msg}
+            </p>
+          )}
 
           {/* Social Icons */}
           <div className="flex items-center gap-5 mt-6 md:justify-end">
             {/* <Link href="#"><Facebook size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link> */}
-            <Link href="https://x.com/circumcentric" target="_blank"><Twitter size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
-            <Link href="https://instagram.com/circum.centric" target="_blank"><Instagram size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
-            <Link href="https://linkedin.com/company/circum-centric" target="_blank"><Linkedin size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
+            <Link href="https://x.com/circumcentric" target="_blank" rel="noopener noreferrer"><FaTwitter size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
+            <Link href="https://instagram.com/circum.centric" target="_blank" rel="noopener noreferrer"><FaInstagram size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
+            <Link href="https://linkedin.com/company/circum-centric" target="_blank" rel="noopener noreferrer"><FaLinkedin size={22} className="text-gray-600 hover:text-[#4A48FF] transition" /></Link>
           </div>
         </motion.div>
-
       </div>
     </footer>
   );

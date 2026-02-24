@@ -138,9 +138,9 @@ export default function CircumCentricLinks() {
             </motion.a>
           ))}
         </div>
-      <div className="flex gap-2 justify-center items-center pt-10 text-sm text-black/50">
+      <div className="text-center pt-10 text-sm text-black/50">
         {" "}
-        <Copyright /> by Circum Centric {new Date().getFullYear()} | All right reserved{" "}
+      Copyright by Circum Centric {new Date().getFullYear()} <br /> <span className="text-center">All right reserved</span>{" "}
       </div>
       </motion.div>
 

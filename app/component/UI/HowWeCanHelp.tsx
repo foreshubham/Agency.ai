@@ -1,100 +1,125 @@
+"use client";
 import React from "react";
 import assets, { company_logos } from "@/public/assets.js";
 import Image from "next/image";
 
+const services = [
+  {
+    title: "Advertising",
+    description:
+      "Performance-driven campaigns engineered to scale revenue across modern digital platforms.",
+    icon: assets.ads_icon,
+  },
+  {
+    title: "Content Marketing",
+    description:
+      "Strategic storytelling systems that attract, nurture, and convert high-value audiences.",
+    icon: assets.marketing_icon,
+  },
+  {
+    title: "Brand Strategy",
+    description:
+      "Positioning and messaging frameworks that make your brand unforgettable.",
+    icon: assets.content_icon,
+  },
+  {
+    title: "Web Experience",
+    description:
+      "Conversion-focused websites designed with clarity, speed, and elegance.",
+    icon: assets.social_icon,
+  },
+];
+
 export default function HowCanWeHelp() {
   return (
-    <section className="w-full py-24 bg-white text-center relative overflow-hidden">
+    <section className="relative py-32 bg-white overflow-hidden">
 
-      {/* Background gradient + noise */}
-      <div className="absolute inset-0 bg-linear-to-b from-white via-purple-50 to-white opacity-90" />
+      {/* Soft radial light */}
+      <div className="absolute inset-0 -z-10 bg-[radial-linear(circle_at_top,rgba(99,102,241,0.08),transparent_65%)]" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 text-center">
 
-        {/* Trusted Logos */}
-        <p className="text-gray-500 mb-6 text-sm">Trusted by Leading Companies</p>
+        {/* Heading */}
+        <h2 className="text-5xl font-semibold tracking-tight text-gray-900 mb-6">
+          How can we <span className="text-[#4A48FF] italic underline ">help?</span>
+        </h2>
 
-        <div className="flex flex-wrap justify-center items-center gap-10 mb-20">
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-16">
+          We create refined digital systems that feel effortless and drive meaningful growth.
+        </p>
+
+        {/* Logos */}
+        <div className="flex flex-wrap justify-center items-center gap-12 mb-24 opacity-70">
           {company_logos.map((logo, index) => (
             <Image
               key={index}
               src={logo}
               alt="company logo"
-              height={24}
-              className="h-6 w-auto"
+              height={28}
+              className="h-7 w-auto  transition duration-300"
             />
           ))}
         </div>
 
-        {/* Title */}
-        <h2 className="text-4xl font-semibold text-gray-800 mb-4">
-          How can we help?
-        </h2>
+        {/* Horizontal Auto Scroller */}
+        <div className="relative w-full overflow-hidden">
 
-        <p className="text-gray-500 max-w-xl mx-auto mb-16">
-          From strategy to execution, we craft digital solutions that move your
-          business forward.
-        </p>
+          {/* Edge Fade Effect */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-32 bg-linear-to-r from-white to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-32 bg-linear-to-l from-white to-transparent z-10" />
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex gap-10 animate-scroll w-max hover:[animation-play-state:paused]">
 
-          {/* Advertising */}
-          <div className="bg-white rounded-2xl shadow-md p-8 flex gap-6 items-start border border-gray-100">
-            <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center shadow-inner">
-              <Image src={assets.ads_icon} alt="Ads Icon" className="h-8 w-8" />
-            </div>
-            <div className="text-left">
-              <h3 className="font-semibold text-lg mb-2 text-[#364153]">Advertising</h3>
-              <p className="text-gray-500 text-sm">
-                We turn bold ideas into powerful digital solutions that connect,
-                engage...
-              </p>
-            </div>
+            {[...services, ...services].map((service, index) => (
+              <div
+                key={index}
+                className="min-w-[520px] backdrop-blur-xl bg-white/60 border border-white/40 rounded-3xl p-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition-all duration-300 hover:shadow-[0_15px_60px_rgba(0,0,0,0.12)]"
+              >
+                <div className="flex items-start gap-6 text-left">
+
+                  <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-sm">
+                    <Image
+                      src={service.icon}
+                      alt={service.title}
+                      className="h-8 w-8"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-gray-600 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            ))}
+
           </div>
-
-          {/* Content Marketing */}
-          <div className="bg-white rounded-2xl shadow-md p-8 flex gap-6 items-start border border-gray-100">
-            <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center shadow-inner">
-              <Image src={assets.marketing_icon} alt="Marketing Icon" className="h-8 w-8" />
-            </div>
-            <div className="text-left">
-              <h3 className="font-semibold text-lg mb-2 text-[#364153]">Content marketing</h3>
-              <p className="text-gray-500 text-sm">
-                We help you execute your plan and deliver results.
-              </p>
-            </div>
-          </div>
-
-          {/* Content Writing */}
-          <div className="bg-white rounded-2xl shadow-md p-8 flex gap-6 items-start border border-gray-100">
-            <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center shadow-inner">
-              <Image src={assets.content_icon} alt="Content Icon" className="h-8 w-8" />
-            </div>
-            <div className="text-left">
-              <h3 className="font-semibold text-lg mb-2 text-[#364153]">Content writing</h3>
-              <p className="text-gray-500 text-sm">
-                We help you create a marketing strategy that drives results.
-              </p>
-            </div>
-          </div>
-
-          {/* Social Media */}
-          <div className="bg-white rounded-2xl shadow-md p-8 flex gap-6 items-start border border-gray-100">
-            <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center shadow-inner">
-              <Image src={assets.social_icon} alt="Social Icon" className="h-8 w-8" />
-            </div>
-            <div className="text-left">
-              <h3 className="font-semibold text-lg mb-2 text-[#364153]  ">Social media</h3>
-              <p className="text-gray-500 text-sm">
-                We help you build a strong social media presence and engage with
-                your audience.
-              </p>
-            </div>
-          </div>
-
         </div>
+
       </div>
+
+      {/* Animation */}
+      <style jsx>{`
+        .animate-scroll {
+          animation: scroll 35s linear infinite;
+        }
+
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
+
     </section>
   );
 }

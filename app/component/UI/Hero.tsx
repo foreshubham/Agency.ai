@@ -38,7 +38,7 @@ export default function Hero() {
           <div className="flex items-center gap-2 px-4 py-2 bg-white shadow-sm rounded-full border border-gray-200/60">
             <img src="/group_profile.png" alt="users" className="w-18 rounded-full" />
             <span className="text-gray-600 text-sm">
-              Trusted by 10k+ people
+              Trusted & loved by people
             </span>
           </div>
         </motion.div>
@@ -51,7 +51,7 @@ export default function Hero() {
           className="text-4xl md:text-[5.2rem] font-medium text-[#364153] tracking-tight leading-tight"
         >
           Turning imagination into <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4A48FF] to-[#7F7CFF]">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-[#4A48FF] to-[#7F7CFF]">
             digital
           </span>{" "}
           impact.

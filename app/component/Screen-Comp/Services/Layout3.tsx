@@ -18,7 +18,7 @@ export default function About() {
           className="rounded-3xl overflow-hidden shadow-xl"
         >
           <Image
-            src="/about_img.png"
+            src="/about.webp"
             alt="About"
             width={600}
             height={450}

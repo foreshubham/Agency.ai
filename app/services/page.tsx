@@ -10,9 +10,9 @@ export default function Services() {
   return (
     <>
     <ScrollServices />
-      {/* <Features /> */}
-      {/* <Stats /> */}
-      <PricingSection />
+      <Features />
+      <Stats />
+      {/* <PricingSection /> */}
       <About />
       {/* <ScrollServices /> */}
     </>

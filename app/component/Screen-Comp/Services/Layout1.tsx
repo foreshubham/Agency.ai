@@ -11,63 +11,63 @@ const services = [
     title: "Web Development",
     description: "High-performance, scalable websites & web apps using modern tech.",
     image: "/services/web-dev.png",
-    href: "/services/web-development",
+    href: "/contact-us",
     category: "Development",
   },
   {
     title: "UI / UX Design",
     description: "User-centered product design focused on conversion and clarity.",
     image: "/services/brand.png",
-    href: "/services/ui-ux",
+    href: "/contact-us",
     category: "Design",
   },
   {
     title: "AI Solutions",
     description: "AI-powered automation, chatbots, and smart business tools.",
     image: "/services/ai.svg",
-    href: "/services/ai-solutions",
+    href: "/contact-us",
     category: "AI",
   },
   {
     title: "Website Maintenance",
     description: "Ongoing monitoring, performance optimization, and updates.",
     image: "/services/maintaine.gif",
-    href: "/services/website-maintenance",
+    href: "/contact-us",
     category: "Development",
   },
   {
     title: "Social Media Management",
     description: "Content strategy, posting, and growth-driven social campaigns.",
     image: "/services/smm.gif",
-    href: "/services/social-media-management",
+    href: "/contact-us-management",
     category: "Marketing",
   },
   {
     title: "Content Creation",
     description: "High-quality visuals, videos, and written content that converts.",
     image: "/services/bd.gif",
-    href: "/services/content-creation",
+    href: "/contact-us",
     category: "Marketing",
   },
   {
     title: "Smart OOH Advertising",
     description: "AI-powered outdoor advertising for maximum local impact.",
     image: "/services/ooh.jpeg",
-    href: "/services/ooh-advertising",
+    href: "/contact-us",
     category: "Marketing",
   },
   {
     title: "Google Reviews Booster",
     description: "Improve trust, authority, and visibility with real reviews.",
     image: "/services/review.png",
-    href: "/services/google-reviews",
+    href: "/contact-us",
     category: "Growth",
   },
   {
     title: "Complete Business Development",
     description: "End-to-end digital growth — strategy, execution & scaling.",
     image: "/services/content.gif",
-    href: "/services/business-development",
+    href: "/contact-us",
     category: "Growth",
   },
 ];
@@ -140,7 +140,7 @@ export default function ServicesSection() {
                     </p>
 
                     <span className="mt-6 text-[#4A48FF] font-medium">
-                      View service →
+                      Get a call →
                     </span>
                   </div>
                 </div>
